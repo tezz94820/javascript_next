@@ -1,0 +1,38 @@
+#chapter-1 :- Execution Context
+
+There are 2 parts in which whole functionality of javascript works.
+1. Memory :- In this everything is saved in the form of key-value pair.so variables and fucntions are stored in the key-value pair format.
+
+2. code :- in this there is a single thread which operates and synchronously each line of code is executed.
+
+Therefore ,, ## javascript is synchronous single threaded language.
+
+######################################################################################################
+
+#####chapter :- 2 :- How the code is executed and how complete execution context is created
+##code:-
+var a = 2
+function square(n){
+    var ans = n*n
+    return ans
+
+}
+var square2 = square(2)
+var square4 = square(4)
+
+1. The Global execution context will be created for this code where all the variables a square to n square 4 will be assigned undefined to it and the function square will Store all the function code in the form of string.
+2. There are two phases in which the code execution works first is the memory creation and the second is the code execution. Memory creation is the fees which we just earlier discussed and then the code execution starts. At the code execution a = 2 is set in place of undefined. then it goes to square 2 and then it calls for a square function.
+3. For square function a whole new execution context will be created this time this is a local execution context. In this again there will be two faces that is memory creation and code execution . In memory creation answer will be assigned as undefined. Then why code execution the answer will get it value as n x n. When it hits return it Returns all the value of answer to square2 variable and delete all its local execution context.
+4. After they same happens for square4 variable and the complete program ends when the complete program and the Global execution context will also be deleted
+
+#####  CALL STACK
+1. Call start maintains the order of execution of the all execution context
+2. In the above code the Global execution context will be in the bottom of the stack and then a new execution context is created for square 2 variable function call . so now the condition is at the bottom there is the Global execution context and above it is the local ka execution context of square 2. After returning the value from square to function the local execution context is destroyed.
+3. Again for the square 4 new execution context is created and put top of the stack above Global execution context. When the square 4 function execution context returns the value it again goes back to the Global execution context
+4. When the complete program get over. The Global execution context is removed from the stack and the whole program is stopped giving the final answer
+5. Now call stack has variant different names like execution context stack,program stack,machine stack,control stack,runtime stack
+
+
+####################################################################################################3
+        CHAPTER :- HOISTING :- in hoisting folder 
+
