@@ -35,4 +35,36 @@ var square4 = square(4)
 
 ####################################################################################################3
         CHAPTER :- HOISTING :- in hoisting folder 
+####################################################################################################
+        CHAPTER :- what happens at the start of javascript program : this and window object
+
+1. At the start of the JavaScript program three things happen. 
+    1. A global execution context is created 
+    2. Window object is created 
+    3. This keyword is created 
+2. Even if your JavaScript file is empty even then this three things happen.
+3. For the Global execution context this keyword refers to the window object . So if you write (this==window) you will get true
+4. For browser that object is called as a window object as it is a Chrome v8 engine. For Mozilla it may be called different and for node it may be called different
+5. Whenever you add a variable in a global space that gets attached to the window object.
+code :-
+        var a=10
+        function b(){
+            var x = 11;
+        }
+        console.log(window.a) //10
+        console.log(a)  //10
+        console.log(x) //notDefined
+6. so whenever window is not written for global variables it is assumed that we aare talking about global window objet.
+    so 
+        window.a == a //true
+        this == Window //true
+        a == this.a //true
+
+
+################################################################################################################################
+1.JavaScript is a loosely tide language means you can assigned string integers date everything to a variable. It is even possible that you first join a variable as integer and then assign it as string , it is totally possible in this case.
+
+    SCOPE CHAIN and LEXICAL ORDER 
+1. Lexical :- lexical means in hierarchy. Here lexical means that in call stack when one functions execution context is above the another functions execution context, both these two execution context are in hierarchy.
+Inside scope_lexical folder
 
