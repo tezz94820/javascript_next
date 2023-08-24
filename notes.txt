@@ -68,3 +68,15 @@ code :-
 1. Lexical :- lexical means in hierarchy. Here lexical means that in call stack when one functions execution context is above the another functions execution context, both these two execution context are in hierarchy.
 Inside scope_lexical folder
 
+
+#######################################################################################################
+
+let && const
+
+1. Are let and const hoisted :- yes but it is in temporal dead zone.
+2. Normal var variables are hoisted and stored in the global object. But let and const variables are even hoisted but they re not in the global object.
+    they are in the temporal dead zone that is some other space other than the global window.
+########################3
+
+
+
