@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Learning about callback in event listeners
+    <br/>
+    <button id="clickMe">Click Me</button>
+
+    <script>
+        function addlisteners(){
+            let count = 0;
+            document.getElementById("clickMe").addEventListener("click", function(){
+                console.log("count = " + ++count); 
+            })
+        }
+        addlisteners();
+        // so we added the evernt listener inside a another function and implemented countung button functionlaity
+        //with the help of closures. 
+
+        //it is very important to garbage collect or remove the event listeners b/c closure remain there and store the values taking the memory .
+        //so we need to remove them to remve the stored closures.
+    </script>
+</body>
+</html>
