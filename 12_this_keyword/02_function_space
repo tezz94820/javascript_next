@@ -1,0 +1,25 @@
+// this keyword for function works different in strict mode and non-strict mode.
+
+"use strict";
+
+function x(){
+    console.log(this);
+    // when in strctit mode it gives undefined
+    // when in non-strict mode it gives window object and this global object is different than global space obj.
+}
+x()
+
+
+// IMP
+
+// In NON-STRICT MODE
+// this substitution happens.
+// inside a function If the value of this keyword is null or undefined then it is replaced by the global obejct.
+
+
+// so you are running the script in non-strict mode and this is undefined/null then it will be replace by global object.
+// but if you change to strict mode then this keyword is not replaced by global object.
+
+//so this substitution happens in non-strict mode.
+// and strict mode bans this substitution.
+
