@@ -46,7 +46,7 @@ handlePromise()
 // at the time javascript receives the await keyword it discontinues the progream and remove it from call stack 
 // the function will be stored somewhere elese in the event loop and once that promise is ressolced the handlefunction is brought back to call stack.
 // now when p1 is resolved after that javascript engine agains sees await in front of p2 promise. it again discontinues handle function and remove it from call stack . 
-// after p2 promise is resolved after 5 seconds because 5 seconds have already elapsed. settimout always counts the time from start.
+// p2 promise is resolved after 5 seconds because 5 seconds have already elapsed. settimout always counts the time from start.
 // after promise p2 is reolved  the function finishes and over .
 
 

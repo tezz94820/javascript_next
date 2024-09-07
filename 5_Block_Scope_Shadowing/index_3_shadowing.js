@@ -42,7 +42,7 @@ let q = 100;
 //_____________________
 let r = 100;
 {
-    let r = 100; // not posiisble
+    let r = 100; // posiisble
 }
 
 //__________________
